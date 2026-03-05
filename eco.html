@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco Store - Cleanify</title>
+    <title>Eco Store - Swachtha</title>
     <link rel="stylesheet" href="./static/User.css">
     <style>
         .eco-badge{position:absolute;top:15px;left:15px;background:linear-gradient(135deg,#1a7f44,#65a53b);color:white;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:600;}
@@ -19,7 +19,7 @@
 </head>
 <body>
     <nav>
-        <h2 data-key="title">🌿 CLEANIFY</h2>
+        <h2 data-key="title">🌿 Swachtha</h2>
         <ul>
             <li><a href='./user.html'>Home</a></li>
             <li><a href='./report.html'>Report Issue</a></li>
@@ -131,8 +131,8 @@
     <footer><p>© 2026 Swachhta Platform | Built for a Clean India 🇮🇳</p></footer>
 
     <script>
-        const API = 'https://cleanify-6yh1.onrender.com';
-        function getToken(){return localStorage.getItem('cleanify_token');}
+        const API = 'https://Swachtha-6yh1.onrender.com';
+        function getToken(){return localStorage.getItem('Swachtha_token');}
         function logout(){
             fetch(`${API}/api/auth/logout`,{method:'POST',headers:{'Authorization':'Bearer '+getToken()}});
             localStorage.clear(); window.location.href='./index.html';
@@ -199,7 +199,7 @@
             document.body.appendChild(t);
             setTimeout(()=>{t.style.animation='slideUp 0.3s ease reverse';setTimeout(()=>t.remove(),300);},2500);
         }
-        const T = { en:{ title:'🌿 CLEANIFY', storeTitle:'🛒 Eco-Friendly Store', storeSubtitle:'Shop sustainable products, earn green points, and buy directly on Flipkart!' }};
+        const T = { en:{ title:'🌿 Swachtha', storeTitle:'🛒 Eco-Friendly Store', storeSubtitle:'Shop sustainable products, earn green points, and buy directly on Flipkart!' }};
         const cache = {};
         async function fetchT(text,lang){if(lang==='en')return text;const k=text+'|'+lang;if(cache[k])return cache[k];try{const r=await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=en|${lang}`);const d=await r.json();return cache[k]=d.responseData.translatedText;}catch{return text;}}
         async function changeLanguage(){const lang=document.getElementById('languageSwitcher').value;localStorage.setItem('preferredLanguage',lang);for(const el of document.querySelectorAll('[data-key]')){const orig=T.en[el.getAttribute('data-key')];if(!orig)continue;el.textContent=lang==='en'?orig:await fetchT(orig,lang);}}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Track Waste Picker - Cleanify</title>
+    <title>Track Waste Picker - Swachtha</title>
     <link rel="stylesheet" href="./static/User.css">
     <style>
         .tracker-card { background:white; border-radius:16px; padding:24px; box-shadow:0 4px 20px rgba(0,0,0,0.1); margin-bottom:20px; }
@@ -32,7 +32,7 @@
 </head>
 <body>
     <nav>
-        <h2>🌿 CLEANIFY</h2>
+        <h2>🌿 Swachtha</h2>
         <ul>
             <li><a href='./user.html'>Home</a></li>
             <li><a href='./report.html'>Report Issue</a></li>
@@ -132,8 +132,8 @@
     <footer><p>© 2026 Swachhta Platform | Built for a Clean India 🇮🇳</p></footer>
 
     <script>
-        const API = 'https://cleanify-6yh1.onrender.com';
-        function getToken() { return localStorage.getItem('cleanify_token'); }
+        const API = 'https://Swachtha-6yh1.onrender.com';
+        function getToken() { return localStorage.getItem('Swachtha_token'); }
         function logout() {
             fetch(`${API}/api/auth/logout`,{method:'POST',headers:{'Authorization':'Bearer '+getToken()}});
             localStorage.clear(); window.location.href='./index.html';

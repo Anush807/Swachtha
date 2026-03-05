@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Register for CLEANIFY - Join the movement for cleaner cities">
-    <title>Register - CLEANIFY</title>
+    <meta name="description" content="Register for Swachtha - Join the movement for cleaner cities">
+    <title>Register - Swachtha</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -925,7 +925,7 @@
             <div class="register-branding">
                 <div class="brand-header">
                     <span class="logo-icon">🧹🌿</span>
-                    <span class="logo-text">CLEANIFY</span>
+                    <span class="logo-text">Swachtha</span>
                 </div>
                 <div class="brand-content">
                     <h1>Join the Clean City Movement</h1>
@@ -1346,7 +1346,7 @@
             const role = document.querySelector('input[name="role"]:checked').value;
 
             try {
-                const API = 'https://cleanify-6yh1.onrender.com';
+                const API = 'https://Swachtha-6yh1.onrender.com';
                 const res = await fetch(`${API}/api/auth/register`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -1355,8 +1355,8 @@
                 const data = await res.json();
                 if (!res.ok) throw new Error(data.error || 'Registration failed');
 
-                localStorage.setItem('cleanify_token', data.token);
-                localStorage.setItem('cleanify_role', data.role);
+                localStorage.setItem('Swachtha_token', data.token);
+                localStorage.setItem('Swachtha_role', data.role);
 
                 showMessage(registerMsg, '🎉 Account created successfully! Redirecting...', 'success');
                 document.getElementById('step3-indicator').className = 'progress-step completed';

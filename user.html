@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CLEANIFY - Home</title>
+    <title>Swachtha - Home</title>
     <link rel="stylesheet" href="./static/User.css">
 </head>
 <body>
     <nav>
-        <h2 data-key="title">🌿 CLEANIFY</h2>
+        <h2 data-key="title">🌿 Swachtha</h2>
         <ul>
             <li><a href="./user.html" data-key="home">Home</a></li>
             <li><a href="./report.html" data-key="report">Report Issue</a></li>
@@ -102,8 +102,8 @@
     <footer><p>© 2026 Swachhta Platform | Built for a Clean India 🇮🇳</p></footer>
 
     <script>
-        const API = 'https://cleanify-6yh1.onrender.com';
-        function getToken() { return localStorage.getItem('cleanify_token'); }
+        const API = 'https://Swachtha-6yh1.onrender.com';
+        function getToken() { return localStorage.getItem('Swachtha_token'); }
         function logout() {
             fetch(`${API}/api/auth/logout`, { method:'POST', headers:{'Authorization':'Bearer '+getToken()} });
             localStorage.clear(); window.location.href = './index.html';
@@ -148,7 +148,7 @@
 
         // ── Translation System (8 languages) ──
         const T = {
-            en: { title:'🌿 CLEANIFY', home:'Home', report:'Report Issue', ai:'AI Classifier', eco:'Eco Store', rewards:'Rewards',
+            en: { title:'🌿 Swachtha', home:'Home', report:'Report Issue', ai:'AI Classifier', eco:'Eco Store', rewards:'Rewards',
                   welcome:'Welcome back!', tagline:'Together we build a cleaner, greener city.', greenPoints:'Green Points',
                   reportsFiled:'Reports Filed', resolved:'Resolved', level:'Level', quickActions:'⚡ Quick Actions',
                   reportAction:'Report an Issue', reportSub:'Dumping, bins, drains', aiAction:'AI Waste Classifier',

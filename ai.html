@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Waste Classifier - Cleanify</title>
+    <title>AI Waste Classifier - Swachtha</title>
     <link rel="stylesheet" href="./static/User.css">
 </head>
 <body>
     <nav>
-        <h2 data-key="title">🌿 CLEANIFY</h2>
+        <h2 data-key="title">🌿 Swachtha</h2>
         <ul>
             <li><a href="./user.html" data-key="home">Home</a></li>
             <li><a href="./report.html" data-key="report">Report Issue</a></li>
@@ -85,11 +85,11 @@
     <footer><p>© 2026 Swachhta Platform | Built for a Clean India 🇮🇳</p></footer>
 
     <script>
-        const API = 'https://cleanify-6yh1.onrender.com';
-        function getToken() { return localStorage.getItem('cleanify_token'); }
+        const API = 'https://Swachtha-6yh1.onrender.com';
+        function getToken() { return localStorage.getItem('Swachtha_token'); }
         function logout() {
             fetch(`${API}/api/auth/logout`,{method:'POST',headers:{'Authorization':'Bearer '+getToken()}});
-            localStorage.removeItem('cleanify_token'); localStorage.removeItem('cleanify_role');
+            localStorage.removeItem('Swachtha_token'); localStorage.removeItem('Swachtha_role');
             window.location.href = './index.html';
         }
         window.addEventListener('DOMContentLoaded', () => {
@@ -186,7 +186,7 @@
             }
         }
 
-        const T = { en:{ title:'🌿 CLEANIFY', home:'Home', report:'Report Issue', ai:'AI Classifier', eco:'Eco Store', reward:'Rewards',
+        const T = { en:{ title:'🌿 Swachtha', home:'Home', report:'Report Issue', ai:'AI Classifier', eco:'Eco Store', reward:'Rewards',
                          aiHeader:'🤖 AI Waste Classifier', aiSubtitle:'Upload an image — AI classifies it as Dry, Wet, or E-Waste instantly!',
                          dropText:'Drag & drop an image or click to upload', classifyBtn:'🔍 Classify Waste',
                          guideTitle:'♻️ Waste Classification Guide' }};

@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Report Unclean Washroom - Cleanify</title>
+    <title>Report Unclean Washroom - Swachtha</title>
     <link rel="stylesheet" href="./static/User.css">
 </head>
 <body>
     <nav>
-        <h2>🌿 CLEANIFY</h2>
+        <h2>🌿 Swachtha</h2>
         <ul>
             <li><a href='./user.html'>Home</a></li>
             <li><a href='./report.html'>Report Issue</a></li>
@@ -63,8 +63,8 @@
     </footer>
 
     <script>
-        const API = 'https://cleanify-6yh1.onrender.com';
-        function getToken() { return localStorage.getItem('cleanify_token'); }
+        const API = 'https://Swachtha-6yh1.onrender.com';
+        function getToken() { return localStorage.getItem('Swachtha_token'); }
         function logout() {
             fetch(`${API}/api/auth/logout`, { method: 'POST', headers: { 'Authorization': 'Bearer ' + getToken() } });
             localStorage.clear();

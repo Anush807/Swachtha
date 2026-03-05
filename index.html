@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In - CLEANIFY</title>
+    <title>Sign In - Swachtha</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -61,7 +61,7 @@
             <div class="login-branding">
                 <div class="brand-header">
                     <span class="logo-icon">🧹🌿</span>
-                    <span class="logo-text">CLEANIFY</span>
+                    <span class="logo-text">Swachtha</span>
                 </div>
                 <div class="brand-content">
                     <h1>Welcome to Clean City</h1>
@@ -106,9 +106,9 @@
         </div>
     </div>
     <script>
-        const API = 'https://cleanify-6yh1.onrender.com';
-        const token = localStorage.getItem('cleanify_token');
-        const role = localStorage.getItem('cleanify_role');
+        const API = 'https://Swachtha-6yh1.onrender.com';
+        const token = localStorage.getItem('Swachtha_token');
+        const role = localStorage.getItem('Swachtha_role');
         if (token) { window.location.href = role === 'admin' ? './admin.html' : './user.html'; }
         function toggleVis(id, btn) {
             const inp = document.getElementById(id);
@@ -126,9 +126,9 @@
                 const res = await fetch(`${API}/api/auth/login`, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({email, password}) });
                 const data = await res.json();
                 if (!res.ok) throw new Error(data.error || 'Login failed');
-                localStorage.setItem('cleanify_token', data.token);
-                localStorage.setItem('cleanify_role', data.role);
-                localStorage.setItem('cleanify_name', data.fullname);
+                localStorage.setItem('Swachtha_token', data.token);
+                localStorage.setItem('Swachtha_role', data.role);
+                localStorage.setItem('Swachtha_name', data.fullname);
                 showMsg(`✅ Welcome back, ${data.fullname}! Redirecting...`, 'success');
                 setTimeout(() => { window.location.href = data.role === 'admin' ? './admin.html' : './user.html'; }, 1000);
             } catch(err) { showMsg(err.message, 'error'); }

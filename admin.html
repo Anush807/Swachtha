@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - CLEANIFY</title>
+    <title>Admin Dashboard - Swachtha</title>
     <meta name="description"
-        content="CLEANIFY Admin Dashboard - Manage and review citizen complaints about waste dumping, unclean washrooms, and other cleanliness issues.">
+        content="Swachtha Admin Dashboard - Manage and review citizen complaints about waste dumping, unclean washrooms, and other cleanliness issues.">
     <link rel="stylesheet" href="./static/styles.css">
 </head>
 
@@ -15,7 +15,7 @@
     <!-- SIDEBAR -->
     <aside class="sidebar">
         <div class="sidebar-header">
-            <h2>🌿 CLEANIFY</h2>
+            <h2>🌿 Swachtha</h2>
             <span class="admin-badge">Admin Panel</span>
         </div>
         <ul class="sidebar-nav">
@@ -342,7 +342,7 @@
         </div>
 
         <footer class="admin-footer">
-            <p>© 2026 <span>CLEANIFY</span> Admin Panel | Built for a Clean India 🇮🇳</p>
+            <p>© 2026 <span>Swachtha</span> Admin Panel | Built for a Clean India 🇮🇳</p>
         </footer>
     </main>
 
@@ -367,11 +367,11 @@
     <div class="toast" id="toast"></div>
 
         <script>
-        const API = 'https://cleanify-6yh1.onrender.com';
-        function getToken() { return localStorage.getItem('cleanify_token'); }
+        const API = 'https://Swachtha-6yh1.onrender.com';
+        function getToken() { return localStorage.getItem('Swachtha_token'); }
         
         // Auth check
-        if (!getToken() || localStorage.getItem('cleanify_role') !== 'admin') {
+        if (!getToken() || localStorage.getItem('Swachtha_role') !== 'admin') {
             window.location.href = './index.html';
         }
 
