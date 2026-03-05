@@ -68,7 +68,7 @@
     </footer>
 
     <script>
-        const API = 'https://Swachtha-6yh1.onrender.com';
+        const API = 'https://cleanify-6yh1.onrender.com';
         function getToken() { return localStorage.getItem('Swachtha_token'); }
         function logout() {
             fetch(`${API}/api/auth/logout`, { method: 'POST', headers: { 'Authorization': 'Bearer ' + getToken() } });
